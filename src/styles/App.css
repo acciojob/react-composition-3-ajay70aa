@@ -1,28 +1,30 @@
+Tooltip.css
 .tooltip {
-  position: relative;
-  display: block;
-  cursor: pointer;
-  margin-right: 20px;
-}
-
-.tooltiptext {
-  background-color: red;
-  color: white;
-  text-align: center;
-  border-radius: 5px;
-  padding: 5px 8px;
-  position: absolute;
-  bottom: 100%;
-  left: 20%;
-  transform: translateX(-50%);
-  white-space: nowrap;
-  z-index: 1;
-}
-
-
-
-
-
-
-
-
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltiptext {
+    position: absolute;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+  }
+  
+  .tooltiptext.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .tooltiptext.hidden {
+    opacity: 0;
+  }

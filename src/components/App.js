@@ -5,15 +5,19 @@ import Tooltip from "./Tooltip";
 
 const App = () => {
   return (
-    <div>
-        {/* Do not remove the main div */}
-        <Tooltip text="This is a tooltip">
-          <h1>Hover over me</h1>
-        </Tooltip>
-        <Tooltip text="This is another tooltip">
-          <p>Hover over me to see another tooltip</p>
-        </Tooltip>
+    <div className="App">
+        <h2 className='tooltip'>
+          <Tooltip  text="This is a tooltip for the first element">
+            This is a tooltip
+          </Tooltip>
+        </h2>
+          <p className='tooltip'>
+            <Tooltip text="This is a tooltip for the second element">
+              This is another tooltip
+            </Tooltip>
+          </p>
     </div>
+
   )
 }
 
